@@ -1,0 +1,33 @@
+[package]
+name = "cw1155-bluna"
+version = "0.8.0"
+authors = ["Huang Yi <huang@crypto.com>"]
+edition = "2018"
+description = "Basic implementation of a CosmWasm-1155 compliant token"
+license = "Apache-2.0"
+repository = "https://github.com/CosmWasm/cosmwasm-plus"
+homepage = "https://cosmwasm.com"
+documentation = "https://docs.cosmwasm.com"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+backtraces = ["cosmwasm-std/backtraces"]
+# use library feature to disable all init/handle/query exports
+library = []
+
+[dependencies]
+cosmwasm-std = { version = "0.16.0" }
+cosmwasm-storage = { version = "0.16.0" }
+cw-storage-plus = "0.8.0"
+cw2 = "0.8.0"
+cw0 = "0.8.0"
+cw1155 = "0.8.0"
+schemars = "0.8.3"
+serde = { version = "1.0.127", default-features = false, features = ["derive"] }
+thiserror = { version = "1.0.26" }
+cw20 = { version = "0.8.0" } 
+
+[dev-dependencies]
+cosmwasm-schema = { version = "0.16.0" }
